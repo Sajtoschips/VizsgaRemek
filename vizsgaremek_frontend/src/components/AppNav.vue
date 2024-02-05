@@ -65,12 +65,13 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item" v-if="status.loggedIn">
-              <a class="nav-link" href="#" @click="onLogout">Kijelentkezés</a>
-            </li>
+            
 
             <div v-if="status.loggedIn">
               {{ user.name }}
+              <li class="nav-item" v-if="status.loggedIn">
+              <a class="nav-link" href="#" @click="onLogout">Kijelentkezés</a>
+            </li>
             </div>
           </ul>
         </div>

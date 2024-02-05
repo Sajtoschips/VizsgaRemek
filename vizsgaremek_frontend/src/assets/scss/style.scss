@@ -38,7 +38,7 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size: 90px;
+  font-size: 4vw;
 }
 
 @keyframes textclip {
@@ -54,7 +54,7 @@
 .footer {
   position: relative;
   width: 100%;
-  background: #3586ff;
+  background: #000000;
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
