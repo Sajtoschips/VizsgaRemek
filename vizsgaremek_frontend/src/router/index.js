@@ -4,6 +4,7 @@ import RegistrationView from '../views/user/RegistrationView.vue'
 import LoginView from '../views/user/LoginView.vue'
 import BlogsView from '../views/blog/BlogsView.vue'
 import NewBlogView from   '../views/blog/NewBlogView.vue'
+import CartView from '../views/CartView.vue'
 
 import { useUserStore } from '../stores/userstore'
 import { storeToRefs } from 'pinia'
@@ -16,12 +17,13 @@ const router = createRouter({
     { path: '/bejelentkezes', component: LoginView},
     { path: '/termekek', component: BlogsView},
     { path: '/ujblog', component: NewBlogView},
+    { path: '/cart', component: CartView},
   ]
 })
 
 router.beforeEach((to,from,next) =>{
   const {status} = storeToRefs(useUserStore());
-  const publicPages = ['/','/bejelentkezes','/regisztracio','/termekek'];
+  const publicPages = ['/','/bejelentkezes','/regisztracio','/termekek','/cart'];
   const autRequired = !publicPages.includes(to.path);
   if (autRequired && !status.value.loggedIn){
     return next('/bejelentkezes')

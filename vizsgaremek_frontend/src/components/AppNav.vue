@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="/"><ion-icon name="home-outline"></ion-icon></a>
+      <a class="navbar-brand" href="/"><ion-icon class="icon" name="home-outline"></ion-icon></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -31,12 +31,13 @@
             <li class="nav-item" v-if="!status.loggedIn">
               <div class="dropdown">
                 <a
-                  
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                ><ion-icon name="person-outline"></ion-icon></a>
+                ><ion-icon class="icon" name="person-outline"></ion-icon></a>
+          <a href="/cart"><ion-icon  class="icon" name="cart-outline"></ion-icon></a>
+
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <router-link class="dropdown-item" to="/bejelentkezes"
@@ -107,6 +108,11 @@ const menuItems = computed(() => {
       to: "/ujblog",
       isLoggedIn: status.value.loggedIn,
     },
+    {
+      title: "Kosár",
+      to: "/cart",
+      isLoggedIn: status.value.loggedIn,
+    },
   ];
 });
 
@@ -129,5 +135,10 @@ function toggleDarkMode() {
 </script>
 
 <style lang="scss" scoped>
-
+.icon{
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  color: black;
+}
 </style>

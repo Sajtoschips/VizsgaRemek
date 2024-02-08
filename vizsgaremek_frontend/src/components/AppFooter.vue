@@ -5,7 +5,7 @@
           <ion-icon name="logo-facebook"></ion-icon>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-discord"></ion-icon>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="#">
           <ion-icon name="logo-linkedin"></ion-icon>
@@ -23,7 +23,7 @@
 
     </ul>
     <p>&copy;2024 GameStrix webáruház</p>
-    <p>By Boglári Bence | Horváth Máté | Vida Csaba Zsombor</p>
+    <p>Boglári Bence | Horváth Máté | Vida Csaba Zsombor</p>
   </footer>
 </template>
 
